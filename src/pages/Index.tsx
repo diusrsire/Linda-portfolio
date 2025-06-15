@@ -97,7 +97,8 @@ const Index = () => {
         <div className="relative container mx-auto px-6 py-16 md:py-24 lg:py-32">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
-              <div className="space-y-6">
+              {/* Adjust this column to move to the right */}
+              <div className="space-y-6 md:pl-12 lg:pl-20 xl:pl-32">
                 <div className="space-y-4">
                   <div className="inline-flex items-center px-3 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
                     <CheckCircle className="w-4 h-4 mr-2" />
@@ -141,7 +142,9 @@ const Index = () => {
                 </div>
               </div>
               
+              {/* ... keep existing code for hero image and floating cards ... */}
               <div className="flex justify-center md:justify-start md:pl-12">
+                {/* ... keep existing code (image and floating cards) ... */}
                 <div className="relative">
                   <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-teal-400 to-blue-500 p-1">
                     <div className="w-full h-full rounded-3xl bg-white flex items-center justify-center overflow-hidden">
