@@ -1,34 +1,13 @@
 # Cloudflare Pages Configuration
+name = "linda-osunga-virtual-care"
+compatibility_date = "2024-06-15"
 
-# Build settings
-build:
-  command: npm run build
-  publish: dist
-  
-# Environment variables
-environment:
-  NODE_VERSION: "18"
-  NPM_VERSION: "latest"
+# Pages configuration
+pages_build_output_dir = "dist"
 
-# Functions (optional, if you add any)
-functions:
-  directory: functions
+[build]
+command = "npm run build"
 
-# Headers (security)
-headers:
-  - source: "/**/*"
-    headers:
-      - key: "X-Frame-Options"
-        value: "DENY"
-      - key: "X-Content-Type-Options"
-        value: "nosniff"
-      - key: "X-XSS-Protection"
-        value: "1; mode=block"
-      - key: "Referrer-Policy"
-        value: "strict-origin-when-cross-origin"
-
-# Redirects for SPA (Single Page Application)
-redirects:
-  - source: "/*"
-    destination: "/index.html"
-    status: 200
+[env.production]
+NODE_VERSION = "18"
+NPM_VERSION = "latest"

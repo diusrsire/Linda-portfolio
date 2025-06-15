@@ -1,73 +1,183 @@
-# Welcome to your Lovable project
+# Linda Osunga - Virtual Healthcare Assistant Portfolio
 
-## Project info
+A professional portfolio website showcasing Linda Osunga's expertise in virtual healthcare assistance, telemedicine support, medical transcription, and HIPAA-compliant patient coordination services.
 
-**URL**: https://lovable.dev/projects/100d2381-7265-45c9-920f-d891298c8f79
+## 🌟 Features
 
-## How can I edit this code?
+- **Modern Design**: Clean, professional interface built with React and Tailwind CSS
+- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- **Performance Optimized**: Fast loading times with code splitting and asset optimization
+- **SEO Friendly**: Comprehensive meta tags and structured data
+- **Accessibility**: WCAG compliant design with keyboard navigation support
+- **Security Headers**: HIPAA-compliant security configurations
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom components
+- **UI Components**: Radix UI primitives with shadcn/ui
+- **Icons**: Lucide React
+- **Routing**: React Router v6
+- **State Management**: TanStack Query (React Query)
+- **Deployment**: Cloudflare Pages
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/100d2381-7265-45c9-920f-d891298c8f79) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18 or higher
+- npm or yarn package manager
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone https://github.com/diusrsire/Linda-portfolio.git
+cd Linda-portfolio/linda-osunga-virtual-care
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📝 Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:prod` - Build for production with optimizations
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors automatically
+- `npm run type-check` - Run TypeScript type checking
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🏗️ Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   └── MainNavigation.tsx
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+├── pages/              # Page components
+│   ├── Index.tsx       # Home page
+│   └── NotFound.tsx    # 404 page
+├── App.tsx             # Main app component
+├── main.tsx            # Application entry point
+└── index.css           # Global styles
+```
 
-This project is built with:
+## 🎨 Customization
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Styling
+The project uses Tailwind CSS for styling. You can customize the design by:
 
-## How can I deploy this project?
+1. Editing `tailwind.config.ts` for theme customization
+2. Modifying component styles in the respective component files
+3. Adding custom CSS in `src/index.css`
 
-Simply open [Lovable](https://lovable.dev/projects/100d2381-7265-45c9-920f-d891298c8f79) and click on Share -> Publish.
+### Content
+Update the portfolio content by editing:
+- `src/pages/Index.tsx` - Main portfolio content
+- `src/components/MainNavigation.tsx` - Navigation menu
+- `public/` - Static assets and images
 
-## Can I connect a custom domain to my Lovable project?
+## 🌐 Deployment
 
-Yes, you can!
+### Cloudflare Pages (Recommended)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Push your code to a Git repository
+2. Connect your repository to Cloudflare Pages
+3. Use these build settings:
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Node.js version**: `18`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Manual Deployment
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Deploy the `dist/` folder to your hosting provider
+
+## 🔧 Configuration Files
+
+- `vite.config.ts` - Vite configuration with build optimizations
+- `tailwind.config.ts` - Tailwind CSS configuration
+- `tsconfig.json` - TypeScript configuration
+- `_headers` - HTTP security headers for deployment
+- `_redirects` - SPA routing configuration
+- `wrangler.toml` - Cloudflare Pages configuration
+
+## 📊 Performance Features
+
+- **Code Splitting**: Automatic vendor and component chunking
+- **Asset Optimization**: Image and asset compression
+- **Modern Build Target**: ES modules for better performance
+- **Bundle Analysis**: Optimized dependency bundling
+- **Caching Strategy**: Long-term caching for static assets
+
+## 🔒 Security Features
+
+- **HIPAA Compliance**: Security headers and configurations
+- **Content Security Policy**: XSS protection
+- **HTTPS Enforcement**: Secure connections only
+- **Data Protection**: Privacy-focused design
+
+## 🎯 SEO Optimization
+
+- **Meta Tags**: Comprehensive SEO metadata
+- **Open Graph**: Social media sharing optimization
+- **Structured Data**: Schema.org markup
+- **Sitemap**: XML sitemap generation
+- **Performance**: Core Web Vitals optimization
+
+## 📱 Browser Support
+
+- Chrome (last 2 versions)
+- Firefox (last 2 versions)
+- Safari (last 2 versions)
+- Edge (last 2 versions)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+**Linda Osunga**  
+Virtual Healthcare Assistant
+
+- **Email**: linda@example.com
+- **Phone**: +1234567890
+- **Website**: [https://linda-osunga-virtual-care.pages.dev](https://linda-osunga-virtual-care.pages.dev)
+
+## 🙏 Acknowledgments
+
+- Built with modern web technologies
+- UI components from Radix UI and shadcn/ui
+- Icons from Lucide React
+- Deployed on Cloudflare Pages
+
+---
+
+*This portfolio showcases professional virtual healthcare assistance services including telemedicine support, medical transcription, HIPAA-compliant patient coordination, and pharmacy tech support.*
