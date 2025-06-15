@@ -93,11 +93,10 @@ const Index = () => {
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="relative container mx-auto px-6 py-16 md:py-24 lg:py-32">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-              {/* Text Section */}
-              <div className="space-y-6 order-2 md:order-1">
+            <div className="grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
+              <div className="space-y-6">
                 <div className="space-y-4">
-                  <div className="inline-flex items-center px-3 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-medium shadow-sm">
+                  <div className="inline-flex items-center px-3 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Available for New Projects
                   </div>
@@ -139,10 +138,9 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* Image Section */}
-              <div className="flex justify-center md:justify-end order-1 md:order-2">
-                <div className="relative flex items-center">
-                  <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-teal-400 to-blue-500 p-1 shadow-2xl transition-all duration-300">
+              <div className="flex justify-center md:justify-start md:pl-8">
+                <div className="relative">
+                  <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-teal-400 to-blue-500 p-1">
                     <div className="w-full h-full rounded-3xl bg-white flex items-center justify-center overflow-hidden">
                       {!imageError ? (
                         <img
@@ -157,8 +155,8 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  {/* Floating cards - visually spaced */}
-                  <div className="absolute -right-8 sm:-right-12 top-8 sm:top-12 bg-white rounded-2xl shadow-lg p-3 max-w-40 sm:max-w-48 animate-fade-in">
+                  {/* Floating cards */}
+                  <div className="absolute -right-2 sm:-right-4 top-6 sm:top-8 bg-white rounded-2xl shadow-lg p-3 max-w-40 sm:max-w-48">
                     <div className="flex items-center space-x-2 sm:space-x-3">
                       <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
                         <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-600" />
@@ -170,7 +168,7 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  <div className="absolute -left-8 sm:-left-12 bottom-8 sm:bottom-12 bg-white rounded-2xl shadow-lg p-3 max-w-40 sm:max-w-48 animate-fade-in">
+                  <div className="absolute -left-2 sm:-left-4 bottom-6 sm:bottom-8 bg-white rounded-2xl shadow-lg p-3 max-w-40 sm:max-w-48">
                     <div className="flex items-center space-x-2 sm:space-x-3">
                       <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center">
                         <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
