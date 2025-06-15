@@ -171,7 +171,7 @@ const Index = () => {
                     <div className="w-full h-full rounded-3xl bg-white flex items-center justify-center overflow-hidden">
                       {!imageError ? (
                         <img
-                          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                          src="/lovable-uploads/2d31d6c6-a730-465b-9fd1-1fc2acf6ccae.png"
                           alt="Linda Osunga - Professional Healthcare Virtual Assistant"
                           className="w-full h-full object-cover rounded-3xl"
                           onError={() => setImageError(true)}
