@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -126,9 +125,9 @@ const Index = () => {
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Available for Healthcare Projects
                   </div>
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
                     Expert healthcare virtual{" "}
-                    <span className="text-teal-600">assistance you can trust</span>
+                    <span className="text-teal-600 bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">assistance you can trust</span>
                   </h1>
                   <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
                     I'm Linda Osunga, a detail-oriented healthcare professional specializing in telemedicine support, medical transcription, and HIPAA-compliant virtual assistance services.
