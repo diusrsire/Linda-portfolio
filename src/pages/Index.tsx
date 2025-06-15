@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -430,17 +429,10 @@ const Index = () => {
             
             {/* Bottom Footer */}
             <div className="border-t border-gray-700 pt-8">
-              <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-center">
                 <p className="text-gray-400 text-sm">
                   &copy; 2024 Linda Osunga. All rights reserved. Professional Healthcare Virtual Assistant Services.
                 </p>
-                <div className="flex items-center space-x-6 text-sm text-gray-400">
-                  <a href="#" className="hover:text-teal-300 transition-colors">Privacy Policy</a>
-                  <span>•</span>
-                  <a href="#" className="hover:text-teal-300 transition-colors">Terms of Service</a>
-                  <span>•</span>
-                  <a href="#" className="hover:text-teal-300 transition-colors">HIPAA Notice</a>
-                </div>
               </div>
             </div>
           </div>
