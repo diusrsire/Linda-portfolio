@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -92,56 +91,56 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-50 to-blue-50 overflow-hidden">
         <div className="absolute inset-0 bg-white/50"></div>
-        <div className="relative container mx-auto px-4 py-20 md:py-32">
+        <div className="relative container mx-auto px-4 py-12 md:py-20">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center px-4 py-2 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center px-3 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Available for New Projects
                   </div>
-                  <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                     Your healthcare is our{" "}
                     <span className="text-teal-600">top priority</span>
                   </h1>
-                  <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+                  <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
                     I'm Linda Osunga, a tech-savvy virtual assistant specializing in healthcare support services — from telemedicine coordination to HIPAA-compliant data handling.
                   </p>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <Button 
                     size="lg" 
-                    className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 text-lg rounded-xl"
+                    className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 text-base rounded-xl"
                   >
                     Hire Me
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-8 py-4 text-lg rounded-xl"
+                    className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 text-base rounded-xl"
                   >
                     View Portfolio
                   </Button>
                 </div>
 
-                <div className="flex items-center space-x-6 pt-4">
+                <div className="flex items-center space-x-4 pt-2">
                   <div className="flex items-center">
-                    <div className="flex -space-x-2">
-                      <div className="w-10 h-10 bg-teal-500 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">L</div>
-                      <div className="w-10 h-10 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">M</div>
-                      <div className="w-10 h-10 bg-purple-500 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">S</div>
+                    <div className="flex -space-x-1.5">
+                      <div className="w-8 h-8 bg-teal-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">L</div>
+                      <div className="w-8 h-8 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">M</div>
+                      <div className="w-8 h-8 bg-purple-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">S</div>
                     </div>
-                    <span className="ml-3 text-sm text-gray-600">Trusted by 50+ healthcare providers</span>
+                    <span className="ml-2 text-sm text-gray-600">Trusted by 50+ healthcare providers</span>
                   </div>
                 </div>
               </div>
               
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
-                  <div className="w-96 h-96 rounded-3xl bg-gradient-to-br from-teal-400 to-blue-500 p-1">
+                  <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-teal-400 to-blue-500 p-1">
                     <div className="w-full h-full rounded-3xl bg-white flex items-center justify-center overflow-hidden">
                       {!imageError ? (
                         <img
@@ -151,31 +150,31 @@ const Index = () => {
                           onError={() => setImageError(true)}
                         />
                       ) : (
-                        <div className="text-6xl text-gray-400 font-bold">LO</div>
+                        <div className="text-5xl lg:text-6xl text-gray-400 font-bold">LO</div>
                       )}
                     </div>
                   </div>
                   
                   {/* Floating cards */}
-                  <div className="absolute -right-4 top-8 bg-white rounded-2xl shadow-lg p-4 max-w-48">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
+                  <div className="absolute -right-2 sm:-right-4 top-6 sm:top-8 bg-white rounded-2xl shadow-lg p-3 max-w-40 sm:max-w-48">
+                    <div className="flex items-center space-x-2 sm:space-x-3">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-600" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-gray-900">HIPAA Certified</p>
+                        <p className="text-xs sm:text-sm font-semibold text-gray-900">HIPAA Certified</p>
                         <p className="text-xs text-gray-500">100% Compliant</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="absolute -left-4 bottom-8 bg-white rounded-2xl shadow-lg p-4 max-w-48">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <Clock className="w-4 h-4 text-blue-600" />
+                  <div className="absolute -left-2 sm:-left-4 bottom-6 sm:bottom-8 bg-white rounded-2xl shadow-lg p-3 max-w-40 sm:max-w-48">
+                    <div className="flex items-center space-x-2 sm:space-x-3">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                        <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-gray-900">24/7 Available</p>
+                        <p className="text-xs sm:text-sm font-semibold text-gray-900">24/7 Available</p>
                         <p className="text-xs text-gray-500">Remote Support</p>
                       </div>
                     </div>
