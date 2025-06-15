@@ -18,25 +18,22 @@ const MainNavigation = () => {
     <nav className="fixed top-4 left-0 right-0 z-50 w-full">
       <div className="mx-2 md:mx-8 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-3xl shadow-lg">
         <div className="container px-0 md:px-2 py-1.5">
-          <div className="flex items-center justify-between h-[64px] md:h-[68px] gap-x-0 md:gap-x-4 relative">
-            {/* Logo and Name */}
-            <div className="flex items-center space-x-3 min-w-0">
+          <div className="flex items-center justify-between h-[64px] md:h-[68px] gap-x-4">
+            {/* Logo only */}
+            <div className="flex items-center min-w-0">
               <div className="min-w-[2.5rem] min-h-[2.5rem] w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center shadow">
                 <span className="text-white font-extrabold text-lg">LO</span>
               </div>
-              <span className="truncate text-[2rem] font-extrabold text-gray-900 max-w-xs sm:max-w-none leading-tight">
-                Linda Osunga
-              </span>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex flex-1 items-center justify-center">
-              <div className="flex gap-8 xl:gap-11">
+              <div className="flex gap-7 xl:gap-10">
                 {navItems.map(item => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-gray-800 font-semibold whitespace-nowrap hover:text-teal-600 transition-colors duration-200 px-0"
+                    className="text-gray-800 font-semibold whitespace-nowrap hover:text-teal-600 transition-colors duration-200"
                   >
                     {item.name}
                   </a>
@@ -45,8 +42,8 @@ const MainNavigation = () => {
             </div>
 
             {/* Desktop CTA Button */}
-            <div className="hidden md:flex flex-shrink-0 ml-4">
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-7 py-3 rounded-lg text-base font-bold shadow [&_svg]:ml-2" style={{minWidth: '160px', height: '48px'}}>
+            <div className="hidden md:flex flex-shrink-0 ml-1">
+              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-7 py-3 rounded-lg text-base font-bold shadow [&_svg]:ml-2" style={{minWidth: '140px', height: '48px'}}>
                 Get Started
                 <ArrowRight className="h-5 w-5" />
               </Button>
@@ -93,3 +90,4 @@ const MainNavigation = () => {
   );
 };
 export default MainNavigation;
+
