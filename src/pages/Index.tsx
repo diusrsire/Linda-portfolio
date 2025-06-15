@@ -171,7 +171,7 @@ const Index = () => {
                     <div className="w-full h-full rounded-3xl bg-white flex items-center justify-center overflow-hidden">
                       {!imageError ? (
                         <img
-                          src="/lovable-uploads/2d31d6c6-a730-465b-9fd1-1fc2acf6ccae.png"
+                          src="/lovable-uploads/db6d4838-09bc-4e36-8771-ef46e7f7378a.png"
                           alt="Linda Osunga - Professional Healthcare Virtual Assistant"
                           className="w-full h-full object-cover rounded-3xl"
                           onError={() => setImageError(true)}
