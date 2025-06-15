@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,23 +11,23 @@ const Index = () => {
 
   const skills = [
     {
-      category: "Telemedicine Tools",
-      items: ["Zoom for Healthcare", "Doxy.me", "Telehealth Platforms"],
+      category: "Telemedicine & Virtual Assistance",
+      items: ["Zoom for Healthcare", "Doxy.me", "Remote patient coordination", "Appointment scheduling"],
       icon: Phone
     },
     {
       category: "Medical Transcription",
-      items: ["Dragon NaturallySpeaking", "Express Scribe", "Medical Terminology"],
+      items: ["Express Scribe", "Dragon NaturallySpeaking", "Audio dictation transcription", "Medical note formatting"],
       icon: MessageCircle
     },
     {
-      category: "EMR & HIPAA Compliance",
-      items: ["Practice Fusion", "Epic Systems", "HIPAA Protocols"],
+      category: "Medical Records & HIPAA",
+      items: ["Practice Fusion", "Epic Systems", "Patient data entry", "HIPAA Compliance"],
       icon: Shield
     },
     {
-      category: "Pharmacy Support",
-      items: ["Rx Management", "Prior Authorizations", "Insurance Verification"],
+      category: "Pharmacy Tech Support",
+      items: ["PioneerRx", "QS/1", "McKesson Connect", "Inventory tracking"],
       icon: Settings
     }
   ];
@@ -35,22 +36,22 @@ const Index = () => {
     {
       icon: Shield,
       title: "HIPAA Compliant & Secure",
-      description: "Certified in healthcare privacy regulations with secure data handling protocols"
+      description: "Unwavering dedication to confidentiality and accuracy in compliance with HIPAA standards"
     },
     {
       icon: Clock,
-      title: "Fast, Reliable, Organized",
-      description: "Efficient workflows and systematic approach to all healthcare administrative tasks"
+      title: "Detail-Oriented & Reliable",
+      description: "Meticulous attention to detail with consistent, dependable healthcare support services"
     },
     {
       icon: MessageCircle,
-      title: "Proactive Communication",
-      description: "Clear, timely updates and seamless coordination with healthcare teams"
+      title: "Expert Communication",
+      description: "Clear, professional communication with healthcare teams and seamless patient coordination"
     },
     {
       icon: Settings,
-      title: "Industry Tool Expertise",
-      description: "Proficient in leading healthcare software and telemedicine platforms"
+      title: "Advanced Tech Proficiency",
+      description: "Highly skilled in leading healthcare software, EMR/EHR systems, and digital productivity tools"
     }
   ];
 
@@ -58,17 +59,17 @@ const Index = () => {
     {
       number: "01",
       title: "Initial Consultation",
-      description: "Discuss your healthcare practice needs and requirements"
+      description: "We'll discuss your specific healthcare practice needs and workflow requirements"
     },
     {
       number: "02",
-      title: "Custom Setup",
-      description: "Configure systems and workflows tailored to your practice"
+      title: "Custom Implementation",
+      description: "Tailored setup of systems and processes to seamlessly integrate with your practice"
     },
     {
       number: "03",
-      title: "Seamless Integration",
-      description: "Begin providing reliable virtual healthcare support"
+      title: "Ongoing Excellence",
+      description: "Reliable, continuous support to enhance your healthcare operations and patient care"
     }
   ];
 
@@ -76,16 +77,38 @@ const Index = () => {
     {
       name: "Dr. Sarah Johnson",
       role: "Family Practice Physician",
-      content: "Linda's support has been invaluable. Her attention to detail and understanding of healthcare protocols is exceptional.",
+      content: "Linda's expertise in telemedicine support has transformed our practice operations. Her attention to detail and HIPAA compliance knowledge is exceptional.",
       rating: 5
     },
     {
       name: "Dr. Michael Chen",
-      role: "Telemedicine Specialist",
-      content: "Professional, reliable, and always delivers on time. Linda has become an essential part of our telehealth operations.",
+      role: "Internal Medicine Specialist",
+      content: "Professional, reliable, and incredibly skilled. Linda's medical transcription accuracy and EMR management have been invaluable to our clinic.",
       rating: 5
     }
   ];
+
+  const handleGetStarted = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleViewPortfolio = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleScheduleConsultation = () => {
+    window.open('mailto:jeje5482@gmail.com?subject=Healthcare Virtual Assistant Consultation Request&body=Hello Linda,%0A%0AI would like to schedule a consultation to discuss my healthcare practice needs.%0A%0AThank you!', '_blank');
+  };
+
+  const handleSendMessage = () => {
+    window.open('mailto:jeje5482@gmail.com?subject=Healthcare Virtual Assistant Inquiry&body=Hello Linda,%0A%0AI am interested in your healthcare virtual assistant services.%0A%0APlease contact me to discuss further.%0A%0AThank you!', '_blank');
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -97,19 +120,18 @@ const Index = () => {
         <div className="relative container mx-auto px-6 py-8 md:py-10 lg:py-14">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
-              {/* Adjust this column to move to the right */}
               <div className="space-y-6 md:pl-24 lg:pl-32 xl:pl-40">
                 <div className="space-y-4">
                   <div className="inline-flex items-center px-3 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
                     <CheckCircle className="w-4 h-4 mr-2" />
-                    Available for New Projects
+                    Available for Healthcare Projects
                   </div>
                   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                    Your healthcare is our{" "}
-                    <span className="text-teal-600">top priority</span>
+                    Expert healthcare virtual{" "}
+                    <span className="text-teal-600">assistance you can trust</span>
                   </h1>
                   <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
-                    I'm Linda Osunga, a tech-savvy virtual assistant specializing in healthcare support services — from telemedicine coordination to HIPAA-compliant data handling.
+                    I'm Linda Osunga, a detail-oriented healthcare professional specializing in telemedicine support, medical transcription, and HIPAA-compliant virtual assistance services.
                   </p>
                 </div>
                 
@@ -117,16 +139,18 @@ const Index = () => {
                   <Button 
                     size="lg" 
                     className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 text-base rounded-xl"
+                    onClick={handleGetStarted}
                   >
-                    Hire Me
+                    Get Started
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                   <Button 
                     size="lg" 
                     variant="outline" 
                     className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 text-base rounded-xl"
+                    onClick={handleViewPortfolio}
                   >
-                    View Portfolio
+                    View My Services
                   </Button>
                 </div>
 
@@ -134,24 +158,22 @@ const Index = () => {
                   <div className="flex items-center">
                     <div className="flex -space-x-1.5">
                       <div className="w-8 h-8 bg-teal-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">L</div>
-                      <div className="w-8 h-8 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">M</div>
-                      <div className="w-8 h-8 bg-purple-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">S</div>
+                      <div className="w-8 h-8 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">O</div>
+                      <div className="w-8 h-8 bg-purple-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">+</div>
                     </div>
-                    <span className="ml-2 text-sm text-gray-600">Trusted by 50+ healthcare providers</span>
+                    <span className="ml-2 text-sm text-gray-600">Trusted by healthcare professionals nationwide</span>
                   </div>
                 </div>
               </div>
               
-              {/* ... keep existing code for hero image and floating cards ... */}
               <div className="flex justify-center md:justify-start md:pl-12">
-                {/* ... keep existing code (image and floating cards) ... */}
                 <div className="relative">
                   <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-teal-400 to-blue-500 p-1">
                     <div className="w-full h-full rounded-3xl bg-white flex items-center justify-center overflow-hidden">
                       {!imageError ? (
                         <img
                           src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                          alt="Linda Osunga - Professional Healthcare Assistant"
+                          alt="Linda Osunga - Professional Healthcare Virtual Assistant"
                           className="w-full h-full object-cover rounded-3xl"
                           onError={() => setImageError(true)}
                         />
@@ -161,7 +183,6 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  {/* Floating cards */}
                   <div className="absolute -right-2 sm:-right-4 top-6 sm:top-8 bg-white rounded-2xl shadow-lg p-3 max-w-40 sm:max-w-48">
                     <div className="flex items-center space-x-2 sm:space-x-3">
                       <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
@@ -180,8 +201,8 @@ const Index = () => {
                         <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
                       </div>
                       <div>
-                        <p className="text-xs sm:text-sm font-semibold text-gray-900">24/7 Available</p>
-                        <p className="text-xs text-gray-500">Remote Support</p>
+                        <p className="text-xs sm:text-sm font-semibold text-gray-900">Professional</p>
+                        <p className="text-xs text-gray-500">Expert Support</p>
                       </div>
                     </div>
                   </div>
@@ -197,10 +218,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Step by step to get your solution
+              How we work together
             </h2>
             <p className="text-xl text-gray-600">
-              Simple process to get started with professional healthcare virtual assistance
+              A simple, professional process to deliver exceptional healthcare virtual assistance
             </p>
           </div>
           
@@ -224,10 +245,10 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                We care about your expertise
+                My healthcare expertise
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive healthcare technology expertise to support your practice with the latest tools and platforms
+                Comprehensive healthcare technology skills to support your practice with advanced tools and proven expertise
               </p>
             </div>
             
@@ -256,16 +277,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Hire Me Section */}
+      {/* Why Choose Me Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Why we are better
+                Why healthcare professionals choose me
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Professional healthcare virtual assistance with proven expertise and reliability
+                Professional healthcare virtual assistance with proven expertise, reliability, and dedication to excellence
               </p>
             </div>
             
@@ -299,7 +320,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-16">
-              What say our patients
+              What healthcare professionals say
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -331,7 +352,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Free Consultation CTA */}
+      {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -342,15 +363,22 @@ const Index = () => {
                     Free Consultation
                   </h2>
                   <p className="text-gray-600 mb-8 leading-relaxed">
-                    Schedule a complimentary consultation to discuss how I can support your healthcare practice with professional virtual assistance.
+                    Schedule a complimentary consultation to discuss how my healthcare virtual assistance services can support and enhance your practice operations.
                   </p>
-                  <Button 
-                    size="lg" 
-                    className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 text-lg rounded-xl"
-                  >
-                    Schedule Now
-                    <Calendar className="ml-2 h-5 w-5" />
-                  </Button>
+                  <div className="space-y-4">
+                    <p className="text-sm text-gray-500 flex items-center">
+                      <Mail className="w-4 h-4 mr-2" />
+                      jeje5482@gmail.com
+                    </p>
+                    <Button 
+                      size="lg" 
+                      className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 text-lg rounded-xl w-full"
+                      onClick={handleScheduleConsultation}
+                    >
+                      Schedule Consultation
+                      <Calendar className="ml-2 h-5 w-5" />
+                    </Button>
+                  </div>
                 </div>
                 <div className="bg-teal-50 p-12 flex items-center justify-center">
                   <div className="w-64 h-64 bg-teal-100 rounded-2xl flex items-center justify-center">
@@ -367,9 +395,7 @@ const Index = () => {
       <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            {/* Main Footer Content */}
             <div className="grid md:grid-cols-4 gap-12 mb-16">
-              {/* Brand Section */}
               <div className="md:col-span-2 space-y-6">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl flex items-center justify-center">
@@ -377,36 +403,35 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">Linda Osunga</h3>
-                    <p className="text-teal-300 text-sm font-medium">Healthcare Virtual Assistant</p>
+                    <p className="text-teal-300 text-sm font-medium">Healthcare Virtual Assistant Specialist</p>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed max-w-md">
-                  Providing secure, efficient, and HIPAA-compliant virtual healthcare support services to modern medical practices and telemedicine providers.
+                  Providing secure, efficient, and HIPAA-compliant virtual healthcare support services to modern medical practices and telemedicine providers nationwide.
                 </p>
                 <div className="flex items-center space-x-2 text-teal-300">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">Remote Healthcare Support Worldwide</span>
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm">jeje5482@gmail.com</span>
                 </div>
               </div>
               
-              {/* Services Column */}
               <div className="space-y-4">
-                <h4 className="font-semibold text-lg text-white mb-6">Healthcare Services</h4>
+                <h4 className="font-semibold text-lg text-white mb-6">My Services</h4>
                 <ul className="space-y-3">
-                  <li><a href="#" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><Phone className="w-3 h-3" /><span>Telemedicine Support</span></a></li>
-                  <li><a href="#" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><MessageCircle className="w-3 h-3" /><span>Medical Transcription</span></a></li>
-                  <li><a href="#" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><Shield className="w-3 h-3" /><span>HIPAA Compliance</span></a></li>
-                  <li><a href="#" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><Settings className="w-3 h-3" /><span>Practice Management</span></a></li>
-                  <li><a href="#" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><Calendar className="w-3 h-3" /><span>Appointment Scheduling</span></a></li>
+                  <li><a href="#services" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><Phone className="w-3 h-3" /><span>Telemedicine Support</span></a></li>
+                  <li><a href="#services" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><MessageCircle className="w-3 h-3" /><span>Medical Transcription</span></a></li>
+                  <li><a href="#services" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><Shield className="w-3 h-3" /><span>HIPAA Compliance</span></a></li>
+                  <li><a href="#services" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><Settings className="w-3 h-3" /><span>EMR Management</span></a></li>
+                  <li><a href="#services" className="text-gray-300 hover:text-teal-300 transition-colors text-sm flex items-center space-x-2"><Calendar className="w-3 h-3" /><span>Appointment Scheduling</span></a></li>
                 </ul>
               </div>
               
-              {/* Contact Column */}
               <div className="space-y-4">
-                <h4 className="font-semibold text-lg text-white mb-6">Get In Touch</h4>
+                <h4 className="font-semibold text-lg text-white mb-6">Let's Connect</h4>
                 <div className="space-y-4">
                   <Button 
                     className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg"
+                    onClick={handleSendMessage}
                   >
                     <Mail className="w-4 h-4 mr-2" />
                     Send Message
@@ -414,26 +439,15 @@ const Index = () => {
                   <Button 
                     variant="outline" 
                     className="w-full border-teal-400 text-teal-300 hover:bg-teal-600 hover:text-white rounded-xl transition-all duration-300"
+                    onClick={handleScheduleConsultation}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
                     Book Consultation
                   </Button>
                 </div>
-                <div className="pt-4">
-                  <p className="text-sm text-gray-400 mb-3">Follow for Healthcare Tips</p>
-                  <div className="flex space-x-3">
-                    <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:bg-teal-600 hover:border-teal-600 hover:text-white rounded-lg transition-all duration-300">
-                      LinkedIn
-                    </Button>
-                    <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:bg-teal-600 hover:border-teal-600 hover:text-white rounded-lg transition-all duration-300">
-                      Twitter
-                    </Button>
-                  </div>
-                </div>
               </div>
             </div>
             
-            {/* Bottom Footer */}
             <div className="border-t border-gray-700 pt-8">
               <div className="text-center">
                 <p className="text-gray-400 text-sm">
