@@ -16,37 +16,39 @@ const MainNavigation = () => {
 
   return (
     <nav className="fixed top-4 left-0 right-0 z-50 w-full">
-      <div className="mx-4 md:mx-6 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg">
-        <div className="container px-3 md:px-6 py-2">
-          <div className="flex flex-wrap items-center justify-between h-16 gap-x-3 md:gap-x-8 relative">
-            {/* Logo */}
-            <div className="flex items-center space-x-3 md:space-x-4 min-w-0">
-              <div className="min-w-[2.5rem] min-h-[2.5rem] w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">LO</span>
+      <div className="mx-2 md:mx-8 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-3xl shadow-lg">
+        <div className="container px-0 md:px-2 py-1.5">
+          <div className="flex items-center justify-between h-[64px] md:h-[68px] gap-x-0 md:gap-x-4 relative">
+            {/* Logo and Name */}
+            <div className="flex items-center space-x-3 min-w-0">
+              <div className="min-w-[2.5rem] min-h-[2.5rem] w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center shadow">
+                <span className="text-white font-extrabold text-lg">LO</span>
               </div>
-              <span className="truncate text-xl font-bold text-gray-900 max-w-xs sm:max-w-none">
+              <span className="truncate text-[2rem] font-extrabold text-gray-900 max-w-xs sm:max-w-none leading-tight">
                 Linda Osunga
               </span>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex flex-1 items-center justify-center space-x-5 xl:space-x-8 min-w-0">
-              {navItems.map(item => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 whitespace-nowrap hover:text-teal-600 font-medium transition-colors duration-200 px-1"
-                >
-                  {item.name}
-                </a>
-              ))}
+            <div className="hidden md:flex flex-1 items-center justify-center">
+              <div className="flex gap-8 xl:gap-11">
+                {navItems.map(item => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-800 font-semibold whitespace-nowrap hover:text-teal-600 transition-colors duration-200 px-0"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* Desktop CTA Button */}
             <div className="hidden md:flex flex-shrink-0 ml-4">
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-4 flex-nowrap">
+              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-7 py-3 rounded-lg text-base font-bold shadow [&_svg]:ml-2" style={{minWidth: '160px', height: '48px'}}>
                 Get Started
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="h-5 w-5" />
               </Button>
             </div>
 
@@ -66,7 +68,7 @@ const MainNavigation = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200 z-40 bg-white rounded-b-2xl mt-2 shadow-lg animate-in fade-in slide-in-from-top-4">
+            <div className="md:hidden py-4 border-t border-gray-200 z-40 bg-white rounded-b-3xl mt-2 shadow-lg animate-in fade-in slide-in-from-top-4">
               <div className="flex flex-col space-y-2">
                 {navItems.map(item => (
                   <a

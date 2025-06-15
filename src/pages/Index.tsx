@@ -94,11 +94,11 @@ const Index = () => {
       {/* Hero Section */}
       <section id="home" className="relative bg-gradient-to-br from-teal-50 to-blue-50 overflow-hidden pt-16">
         <div className="absolute inset-0 bg-white/50"></div>
-        <div className="relative container mx-auto px-6 py-16 md:py-24 lg:py-32">
+        <div className="relative container mx-auto px-6 py-8 md:py-10 lg:py-14">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
               {/* Adjust this column to move to the right */}
-              <div className="space-y-6 md:pl-12 lg:pl-20 xl:pl-32">
+              <div className="space-y-6 md:pl-24 lg:pl-32 xl:pl-40">
                 <div className="space-y-4">
                   <div className="inline-flex items-center px-3 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
                     <CheckCircle className="w-4 h-4 mr-2" />
