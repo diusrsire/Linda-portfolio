@@ -24,11 +24,11 @@ const MainNavigation = () => {
   }];
   return <nav className="fixed top-4 left-4 right-4 z-50">
       <div className="bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg">
-        <div className="container mx-auto px-3 ">
-          <div className="flex items-center justify-between h-16">
+        <div className="container mx-auto px-3 md:px-6 py-2">
+          <div className="flex items-center justify-between h-16 gap-2 md:gap-8">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-3 md:space-x-4">
+              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">LO</span>
               </div>
               <span className="text-xl font-bold text-gray-900">Linda Osunga</span>
@@ -42,7 +42,7 @@ const MainNavigation = () => {
             </div>
 
             {/* Desktop CTA Button */}
-            <div className="hidden md:flex">
+            <div className="hidden md:flex ml-4">
               <Button className="bg-teal-600 hover:bg-teal-700 text-white">
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
