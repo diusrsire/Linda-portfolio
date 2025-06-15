@@ -19,7 +19,7 @@ const MainNavigation = () => {
       <div className="mx-2 md:mx-8 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-3xl shadow-lg">
         <div className="container px-0 md:px-2 py-1.5">
           {/* Main flexible row */}
-          <div className="flex items-center h-[64px] md:h-[68px] w-full">
+          <div className="flex items-center h-[64px] md:h-[68px] w-full justify-between">
             {/* Logo (left) */}
             <div className="flex items-center min-w-0 flex-shrink-0 mr-2 md:mr-6">
               <div className="flex items-center justify-center min-w-[2.5rem] min-h-[2.5rem] w-12 h-12 bg-teal-500 rounded-lg shadow">
@@ -27,7 +27,7 @@ const MainNavigation = () => {
               </div>
             </div>
             {/* Desktop Navigation (center) */}
-            <div className="hidden md:flex flex-1 justify-center">
+            <div className="hidden md:flex flex-1 min-w-0 justify-center">
               <nav className="flex gap-10 xl:gap-14">
                 {navItems.map(item => (
                   <a
@@ -41,9 +41,9 @@ const MainNavigation = () => {
               </nav>
             </div>
             {/* Desktop CTA Button (right) */}
-            <div className="hidden md:flex flex-shrink-0 ml-6">
+            <div className="hidden md:flex flex-shrink-0 ml-4" style={{ minWidth: '170px' }}>
               <Button
-                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg text-lg font-bold shadow [&_svg]:ml-2"
+                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg text-lg font-bold shadow [&_svg]:ml-2 w-full"
                 style={{ minWidth: '170px', height: '52px' }}
               >
                 Get Started
@@ -90,4 +90,3 @@ const MainNavigation = () => {
   );
 };
 export default MainNavigation;
-
