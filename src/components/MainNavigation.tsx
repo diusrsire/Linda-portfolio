@@ -16,72 +16,74 @@ const MainNavigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">LO</span>
+    <nav className="fixed top-4 left-4 right-4 z-50">
+      <div className="bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">LO</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900">Linda Osunga</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Linda Osunga</span>
-          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-
-          {/* Desktop CTA Button */}
-          <div className="hidden md:flex">
-            <Button className="bg-teal-600 hover:bg-teal-700 text-white">
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
-            ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-teal-600 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </a>
               ))}
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white mt-4">
+            </div>
+
+            {/* Desktop CTA Button */}
+            <div className="hidden md:flex">
+              <Button className="bg-teal-600 hover:bg-teal-700 text-white">
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6 text-gray-700" />
+              ) : (
+                <Menu className="h-6 w-6 text-gray-700" />
+              )}
+            </button>
           </div>
-        )}
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden py-4 border-t border-gray-200">
+              <div className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-700 hover:text-teal-600 font-medium py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+                <Button className="bg-teal-600 hover:bg-teal-700 text-white mt-4">
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
