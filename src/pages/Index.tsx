@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -94,7 +93,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="relative container mx-auto px-4 py-12 md:py-20">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-4 lg:gap-8 items-center">
               <div className="space-y-6">
                 <div className="space-y-4">
                   <div className="inline-flex items-center px-3 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
@@ -139,7 +138,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center md:justify-end">
                 <div className="relative">
                   <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-teal-400 to-blue-500 p-1">
                     <div className="w-full h-full rounded-3xl bg-white flex items-center justify-center overflow-hidden">
