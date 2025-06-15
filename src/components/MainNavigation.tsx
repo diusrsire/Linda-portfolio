@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -20,9 +19,9 @@ const MainNavigation = () => {
         <div className="container px-0 md:px-2 py-1.5">
           <div className="flex items-center justify-between h-[64px] md:h-[68px] gap-x-4">
             {/* Logo only */}
-            <div className="flex items-center min-w-0">
-              <div className="min-w-[2.5rem] min-h-[2.5rem] w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center shadow">
-                <span className="text-white font-extrabold text-lg">LO</span>
+            <div className="flex items-center min-w-0 pl-2 pr-2 sm:pl-4 sm:pr-4">
+              <div className="flex items-center justify-center min-w-[2.5rem] min-h-[2.5rem] w-12 h-12 bg-teal-500 rounded-lg shadow">
+                <span className="text-white font-extrabold text-lg select-none">LO</span>
               </div>
             </div>
 
@@ -90,4 +89,3 @@ const MainNavigation = () => {
   );
 };
 export default MainNavigation;
-
