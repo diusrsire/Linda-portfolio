@@ -138,7 +138,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="flex justify-center md:justify-start md:pl-8">
+              <div className="flex justify-center md:justify-start md:pl-4">
                 <div className="relative">
                   <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-teal-400 to-blue-500 p-1">
                     <div className="w-full h-full rounded-3xl bg-white flex items-center justify-center overflow-hidden">
