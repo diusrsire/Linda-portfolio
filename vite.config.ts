@@ -8,6 +8,24 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+  },  build: {
+    // Optimize bundle splitting for better caching
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-slot', '@radix-ui/react-dialog', '@radix-ui/react-popover'],
+          router: ['react-router-dom'],
+          utils: ['clsx', 'tailwind-merge', 'class-variance-authority']
+        }
+      }
+    },
+    // Enable source maps for production debugging (optional)
+    sourcemap: mode === 'development',
+    // Optimize for modern browsers
+    target: 'esnext',
+    // Use esbuild for faster builds
+    minify: 'esbuild'
   },
   plugins: [
     react(),
@@ -19,4 +37,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom']
+  }
 }));

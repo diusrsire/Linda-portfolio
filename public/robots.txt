@@ -12,3 +12,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://linda-osunga-virtual-care.pages.dev/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
