@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Shield, Clock, MessageCircle, Settings, Briefcase, Phone, CheckCircle, Star, Users, Calendar, Mail, MapPin, Heart } from "lucide-react";
+import MainNavigation from "@/components/MainNavigation";
 
 const Index = () => {
   const [imageError, setImageError] = useState(false);
@@ -88,8 +89,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <MainNavigation />
+      
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-50 to-blue-50 overflow-hidden">
+      <section id="home" className="relative bg-gradient-to-br from-teal-50 to-blue-50 overflow-hidden pt-16">
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="relative container mx-auto px-6 py-16 md:py-24 lg:py-32">
           <div className="max-w-7xl mx-auto">
@@ -187,7 +190,7 @@ const Index = () => {
       </section>
 
       {/* Step by Step Section */}
-      <section className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -213,7 +216,7 @@ const Index = () => {
       </section>
 
       {/* Skills & Software Expertise */}
-      <section className="py-20 bg-gray-50">
+      <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -289,7 +292,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-teal-600 text-white">
+      <section id="testimonials" className="py-20 bg-teal-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-16">
@@ -326,7 +329,7 @@ const Index = () => {
       </section>
 
       {/* Free Consultation CTA */}
-      <section className="py-20 bg-gray-50">
+      <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
