@@ -16,10 +16,13 @@
 ### 2. Configure Build Settings
 Use these settings in the Cloudflare Pages dashboard:
 
-- **Build command**: `npm run build`
-- **Build output directory**: `dist`
-- **Root directory**: `/linda-osunga-virtual-care` (if deploying from subdirectory)
-- **Node.js version**: `18` or `latest`
+**Framework preset**: None (or Custom)
+**Build command**: `npm run build`
+**Build output directory**: `dist`
+**Root directory**: `/linda-osunga-virtual-care` (if deploying from subdirectory)
+**Node.js version**: `18` or `20`
+
+**Important**: Do not use a wrangler.toml file for Pages projects. Configure everything through the Cloudflare Pages dashboard.
 
 ### 3. Environment Variables (if needed)
 In your Cloudflare Pages dashboard, go to Settings > Environment variables and add:
