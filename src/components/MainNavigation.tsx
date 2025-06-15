@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -17,40 +18,40 @@ const MainNavigation = () => {
     <nav className="fixed top-4 left-0 right-0 z-50 w-full">
       <div className="mx-2 md:mx-8 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-3xl shadow-lg">
         <div className="container px-0 md:px-2 py-1.5">
-          <div className="flex items-center justify-between h-[64px] md:h-[68px] gap-x-4">
-            {/* Logo only */}
-            <div className="flex items-center min-w-0 pl-2 pr-2 sm:pl-4 sm:pr-4">
+          <div className="flex items-center h-[64px] md:h-[68px]">
+            {/* Logo */}
+            <div className="flex items-center min-w-0">
               <div className="flex items-center justify-center min-w-[2.5rem] min-h-[2.5rem] w-12 h-12 bg-teal-500 rounded-lg shadow">
                 <span className="text-white font-extrabold text-lg select-none">LO</span>
               </div>
             </div>
-
             {/* Desktop Navigation */}
             <div className="hidden md:flex flex-1 items-center justify-center">
-              <div className="flex gap-7 xl:gap-10">
+              <div className="flex flex-1 items-center justify-center gap-10 xl:gap-14 ml-8">
                 {navItems.map(item => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-gray-800 font-semibold whitespace-nowrap hover:text-teal-600 transition-colors duration-200"
+                    className="text-gray-800 text-lg font-semibold whitespace-nowrap hover:text-teal-600 transition-colors duration-200"
                   >
                     {item.name}
                   </a>
                 ))}
               </div>
             </div>
-
             {/* Desktop CTA Button */}
-            <div className="hidden md:flex flex-shrink-0 ml-1">
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-7 py-3 rounded-lg text-base font-bold shadow [&_svg]:ml-2" style={{minWidth: '140px', height: '48px'}}>
+            <div className="hidden md:flex flex-shrink-0 ml-6">
+              <Button
+                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg text-lg font-bold shadow [&_svg]:ml-2"
+                style={{ minWidth: '170px', height: '52px' }}
+              >
                 Get Started
                 <ArrowRight className="h-5 w-5" />
               </Button>
             </div>
-
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 flex-shrink-0 z-10"
+              className="md:hidden p-2 flex-shrink-0 z-10 ml-auto"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -61,7 +62,6 @@ const MainNavigation = () => {
               )}
             </button>
           </div>
-
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200 z-40 bg-white rounded-b-3xl mt-2 shadow-lg animate-in fade-in slide-in-from-top-4">
@@ -89,3 +89,4 @@ const MainNavigation = () => {
   );
 };
 export default MainNavigation;
+
