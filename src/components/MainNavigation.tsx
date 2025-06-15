@@ -18,16 +18,17 @@ const MainNavigation = () => {
     <nav className="fixed top-4 left-0 right-0 z-50 w-full">
       <div className="mx-2 md:mx-8 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-3xl shadow-lg">
         <div className="container px-0 md:px-2 py-1.5">
-          <div className="flex items-center h-[64px] md:h-[68px]">
-            {/* Logo */}
-            <div className="flex items-center min-w-0">
+          {/* Main flexible row */}
+          <div className="flex items-center h-[64px] md:h-[68px] w-full">
+            {/* Logo (left) */}
+            <div className="flex items-center min-w-0 flex-shrink-0 mr-2 md:mr-6">
               <div className="flex items-center justify-center min-w-[2.5rem] min-h-[2.5rem] w-12 h-12 bg-teal-500 rounded-lg shadow">
                 <span className="text-white font-extrabold text-lg select-none">LO</span>
               </div>
             </div>
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex flex-1 items-center justify-center">
-              <div className="flex flex-1 items-center justify-center gap-10 xl:gap-14 ml-8">
+            {/* Desktop Navigation (center) */}
+            <div className="hidden md:flex flex-1 justify-center">
+              <nav className="flex gap-10 xl:gap-14">
                 {navItems.map(item => (
                   <a
                     key={item.name}
@@ -37,9 +38,9 @@ const MainNavigation = () => {
                     {item.name}
                   </a>
                 ))}
-              </div>
+              </nav>
             </div>
-            {/* Desktop CTA Button */}
+            {/* Desktop CTA Button (right) */}
             <div className="hidden md:flex flex-shrink-0 ml-6">
               <Button
                 className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg text-lg font-bold shadow [&_svg]:ml-2"
@@ -49,7 +50,7 @@ const MainNavigation = () => {
                 <ArrowRight className="h-5 w-5" />
               </Button>
             </div>
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button (always right-aligned) */}
             <button
               className="md:hidden p-2 flex-shrink-0 z-10 ml-auto"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
