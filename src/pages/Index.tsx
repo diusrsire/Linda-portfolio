@@ -93,7 +93,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="relative container mx-auto px-4 py-12 md:py-20">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-4 lg:gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
               <div className="space-y-6">
                 <div className="space-y-4">
                   <div className="inline-flex items-center px-3 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
