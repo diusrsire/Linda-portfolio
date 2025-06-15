@@ -428,39 +428,6 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Trust Indicators */}
-            <div className="border-t border-gray-700 pt-12 pb-8">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-10 h-10 bg-green-100/10 rounded-full flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-green-400" />
-                  </div>
-                  <div className="text-left">
-                    <p className="font-semibold text-white text-sm">HIPAA Certified</p>
-                    <p className="text-gray-400 text-xs">100% Compliant</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-10 h-10 bg-blue-100/10 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-blue-400" />
-                  </div>
-                  <div className="text-left">
-                    <p className="font-semibold text-white text-sm">50+ Providers</p>
-                    <p className="text-gray-400 text-xs">Trusted Partner</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-10 h-10 bg-teal-100/10 rounded-full flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-teal-400" />
-                  </div>
-                  <div className="text-left">
-                    <p className="font-semibold text-white text-sm">24/7 Support</p>
-                    <p className="text-gray-400 text-xs">Always Available</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
             {/* Bottom Footer */}
             <div className="border-t border-gray-700 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
